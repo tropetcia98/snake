@@ -58,6 +58,17 @@ namespace snake
                 Console.WriteLine(q);
             }
 
+            HorizontalLine Line = new HorizontalLine(5,10,8,'+');
+            Line.Drow();
+
+            VerticalLine VertLine = new VerticalLine(15, 5, 10, '%');
+            VertLine.Drow();
+
+
+            
+
+            
+
             Console.ReadLine();
         }
        

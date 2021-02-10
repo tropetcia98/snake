@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace snake
 {
-    class VerticalLine : figure
+   public class VerticalLine : figure
     {
        
         public VerticalLine (int x, int yDown, int yUp, char sym)

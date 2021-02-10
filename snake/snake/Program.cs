@@ -13,6 +13,8 @@ namespace snake
 
             Point p1 = new Point(1, 3,'*') ;
             
+           
+            
             p1.Draw();
 
 
@@ -63,11 +65,16 @@ namespace snake
 
             VerticalLine VertLine = new VerticalLine(15, 5, 10, '%');
             VertLine.Drow();
-
-
+            Point snake1 = new Point(6, 6, '*');
             
+           Snake snake = new Snake(snake1, 10, direction.RIGHT);
+            snake.Drow();
 
-            
+
+
+
+
+
 
             Console.ReadLine();
         }

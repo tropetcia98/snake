@@ -69,6 +69,8 @@ namespace snake
             
            Snake snake = new Snake(snake1, 10, direction.RIGHT);
             snake.Drow();
+            snake.Move();
+           
 
 
 

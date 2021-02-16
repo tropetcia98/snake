@@ -3,13 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace snake
 {
     class Program
     {
         static void Main(string[] args)
+
         {
+            //console.SetBufferSize(80, 25);
+            //HorizontalLine upline = new HorizontalLine(0, 78, 0, '+');
+            //HorizontalLine downline = new HorizontalLine(0, 78, 24, '+');
+            //VerticalLine leftline = new VerticalLine(0, 24, 0, '+');
+            //VerticalLine rightline = new VerticalLine(0, 24, 78, '+');
+            //upline.Drow();
+            //downline.Drow();
+            //leftline.Drow();
+            //rightline.Drow();
+
+
+
 
             Point p1 = new Point(1, 3,'*') ;
             
@@ -69,6 +83,20 @@ namespace snake
             
            Snake snake = new Snake(snake1, 10, direction.RIGHT);
             snake.Drow();
+            snake.Moved();
+            while(true)
+            {
+                if(Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandleKey(key.Key);
+                   
+                }
+                Thread.Sleep(100);
+                snake.Moved();
+                
+            }
+           
 
 
 
@@ -76,7 +104,7 @@ namespace snake
 
 
 
-            Console.ReadLine();
+            
         }
        
         
